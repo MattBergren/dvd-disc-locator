@@ -13,10 +13,6 @@ body {
 }
 .template.qualifier {
     display: inline-block;
-    /* IE 6-7 Hack */
-    
-    *display: inline;
-    zoom: 1;
 }
 #results {
     margin: 1em auto;

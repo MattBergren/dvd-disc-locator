@@ -6,28 +6,56 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<div class="templates">
-		<div class="template filter-chooser">
-			<select name="filter" class="filter-type">
-				<option value="" data-template-type="" selected="selected">
-				Choose a filter
-				</option>
-				<option value="title" data-template-type="template-title">
-				DVD Title
-				</option>
-				<option value="binder" data-template-type="template-binder">
-				Binder
-				</option>
-				<option value="year" data-template-type="template-year">
-				Release Date
-				</option>
-				<option value="viewed" data-template-type="template-viewed">
-				Viewed?
-				</option>
-			</select>
-		</div>
-	</div>
 
+<h1>Disc Locator</h1>
+
+<form id="form-filters" action="#">
+	<fieldset>
+		<legend>Filters</legend>
+		<div id="filters">
+
+		</div>
+		<div class="buttons-wrapper">
+			<input type="button" id="filter-add" value="Add Filter" />
+			<input type="submit" id="filter-apply" value="Apply Filters"/>
+		</div>
+	</fieldset>
+</form>
+
+<div id="panel-results">
+   <table id="results">
+      <tr>
+         <th>Title</th>
+         <th>Year</th>
+         <th>Binder</th>
+         <th>Page</th>
+         <th>Slot</th>
+         <th>Viewed</th>
+      </tr>
+   </table>
+</div>
+<!--hidden templates-->
+<div class="templates">
+	<div class="template filter-chooser">
+		<input type="button" class="filter-remover" value="X" />
+		<select name="filter" class="filter-type">
+			<option value="" data-template-type="" selected="selected">
+			Choose a filter
+			</option>
+			<option value="title" data-template-type="template-title">
+			DVD Title
+			</option>
+			<option value="binder" data-template-type="template-binder">
+			Binder
+			</option>
+			<option value="year" data-template-type="template-year">
+			Release Date
+			</option>
+			<option value="viewed" data-template-type="template-viewed">
+			Viewed?
+			</option>
+		</select>
+	</div>
 	<div class="template template-title">
 		<select name="title-condition">
 			<option value="contains">contains</option>
@@ -55,6 +83,7 @@
 		Yes</label>
 		<label><input type="radio" name="viewed" value="false" /> No</label>
 	</div>
+</div>
 
 <script src="script.js"></script>
 </body>
